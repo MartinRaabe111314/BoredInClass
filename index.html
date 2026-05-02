@@ -1,0 +1,1486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bored in Class</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AF%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <button type="button" class="brand" id="brandHome" aria-label="Home">
+          <span class="brand-mark">B</span>
+          <span class="brand-name">Bored in Class</span>
+        </button>
+        <nav class="tabs" id="tabs" aria-label="Main categories">
+          <button class="tab active" data-tab="home">Home</button>
+          <button class="tab" data-tab="nyt">NYT</button>
+          <button class="tab" data-tab="card">Cards</button>
+          <button class="tab" data-tab="geo">Geography</button>
+          <button class="tab" data-tab="board">Board</button>
+          <button class="tab" data-tab="flash">Flash</button>
+          <button class="tab" data-tab="productivity">Productivity</button>
+          <button class="tab" data-tab="tinkering">Tinkering</button>
+          <button class="tab" data-tab="misc">Misc</button>
+        </nav>
+        <div class="topbar-right">
+          <button class="icon-btn" id="themeBtn" title="Toggle theme">🌗</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <!-- =============== HOME =============== -->
+        <section class="panel active" id="panel-home" aria-label="Game categories">
+          <div class="home-wrap">
+            <div class="home-hero">
+              <h1 class="home-title">Games</h1>
+              <p class="home-sub muted">Tap a category or use the tabs above.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="orchid" data-goto-tab="nyt" aria-label="Daily-style word puzzles">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">📰</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">NYT</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="coral" data-goto-tab="card" aria-label="Cards: poker, solitaire, spades">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🃏</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Cards</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="geo" aria-label="Geography map quiz">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🌍</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Geography</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="sun" data-goto-tab="board" aria-label="Board games">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♟</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Board</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="lime" data-goto-tab="flash" aria-label="Flash-style arcade games">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⚡</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Flash</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="sky" data-goto-tab="productivity" aria-label="Productivity: graphing and scientific calculator">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">📊</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Productivity</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="slate" data-goto-tab="tinkering" aria-label="Tinkering: tools and calculators">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🔧</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Tinkering</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="rose" data-goto-tab="misc" aria-label="Miscellaneous games">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">✨</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Misc</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: NYT =============== -->
+        <section class="panel" id="panel-nyt" aria-label="NYT style games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">NYT</h1>
+              <p class="cat-sub muted">Daily-style word puzzles.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="orchid" data-goto-tab="wordle" aria-label="Wordle">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🔤</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Wordle</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="letterboxed" aria-label="Letter Boxed">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🔳</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Letter Boxed</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="sun" data-goto-tab="nerdle" aria-label="Nerdle: equation guessing puzzle">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">≠</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Nerdle</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="lime" data-goto-tab="quintessential" aria-label="Quintessential: unscramble five five-letter rows">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⨳</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Quintessential</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: CARDS =============== -->
+        <section class="panel card-scene" id="panel-card" aria-label="Card games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Cards</h1>
+              <p class="cat-sub muted">Solitaire, spades, poker vs bots.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="coral" data-goto-tab="poker" aria-label="Poker">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♣</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="solitaire" aria-label="Solitaire">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♦</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Solitaire</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="sky" data-goto-tab="spades" aria-label="Spades">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♠</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Spades</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== POKER HUB =============== -->
+        <section class="panel card-scene" id="panel-poker" aria-label="Poker games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="card">← Cards</button>
+              <h1 class="cat-title">Poker</h1>
+              <p class="cat-sub muted">Four-handed · blinds 10/20</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="sun" data-goto-tab="poker-holdem" aria-label="Texas Hold&apos;em">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♥</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Texas Hold&apos;em</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="rose" data-goto-tab="poker-omaha" aria-label="Omaha Hi/Lo">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🃏</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Omaha Hi/Lo</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== TEXAS HOLD'EM =============== -->
+        <section class="panel card-scene" id="panel-poker-holdem" aria-label="Texas Hold em">
+          <div class="poker-wrap">
+            <aside class="poker-side">
+              <p class="poker-back muted">
+                <button type="button" class="btn ghost" data-goto-tab="poker">← Poker</button>
+              </p>
+              <h2>Texas Hold&apos;em</h2>
+              <p class="muted">Four-handed ring game vs Ada, Bo, and Cy. Blinds rotate — Fold, Call, or Check when facing no bet.</p>
+              <div class="poker-stats">
+                <div>Your stack <strong id="pkHStack">—</strong></div>
+                <div>Pot <strong id="pkHPot">0</strong></div>
+                <div><button type="button" class="btn" id="pkHNew">New hand</button></div>
+              </div>
+              <p class="poker-msg" id="pkHMsg" role="status"></p>
+            </aside>
+            <div class="poker-board">
+              <div class="poker-table-oval">
+                <div class="poker-seat pk-cell-n pk-opponent" id="pkHSeat2"></div>
+                <div class="poker-seat pk-cell-w pk-opponent" id="pkHSeat1"></div>
+                <div class="poker-felt pk-cell-felt">
+                  <div class="poker-pot-badge">Pot <span id="pkHPotmid">0</span></div>
+                  <div class="poker-community" id="pkHComm"></div>
+                </div>
+                <div class="poker-seat pk-cell-e pk-opponent" id="pkHSeat3"></div>
+                <div class="poker-you pk-cell-s">
+                  <div class="poker-hole-label">Your cards</div>
+                  <div class="poker-hole" id="pkHHole"></div>
+                  <div class="poker-actions" id="pkHActions"></div>
+                </div>
+              </div>
+            </div>
+            <div class="poker-result-backdrop" id="pkHResultBackdrop" hidden>
+              <div
+                class="poker-result-dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="pkHResultTitle"
+              >
+                <h3 id="pkHResultTitle" class="poker-result-title">Hand result</h3>
+                <p class="poker-result-text" id="pkHResultText"></p>
+                <button type="button" class="btn" id="pkHResultOk">OK</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== OMAHA HI/LO =============== -->
+        <section class="panel card-scene" id="panel-poker-omaha" aria-label="Omaha Hi Lo">
+          <div class="poker-wrap">
+            <aside class="poker-side">
+              <p class="poker-back muted">
+                <button type="button" class="btn ghost" data-goto-tab="poker">← Poker</button>
+              </p>
+              <h2>Omaha Hi/Lo</h2>
+              <p class="muted">Four-handed ring vs Ada, Bo, and Cy. Four hole cards — exactly two with three board cards for both high and low. Low must qualify as 8-or-better (ace-low).</p>
+              <div class="poker-stats">
+                <div>Your stack <strong id="pkOStack">—</strong></div>
+                <div>Pot <strong id="pkOPot">0</strong></div>
+                <div><button type="button" class="btn" id="pkONew">New hand</button></div>
+              </div>
+              <p class="poker-msg" id="pkOMsg" role="status"></p>
+            </aside>
+            <div class="poker-board">
+              <div class="poker-table-oval">
+                <div class="poker-seat pk-cell-n pk-opponent" id="pkOSeat2"></div>
+                <div class="poker-seat pk-cell-w pk-opponent" id="pkOSeat1"></div>
+                <div class="poker-felt pk-cell-felt">
+                  <div class="poker-pot-badge">Pot <span id="pkOPotmid">0</span></div>
+                  <div class="poker-community" id="pkOComm"></div>
+                </div>
+                <div class="poker-seat pk-cell-e pk-opponent" id="pkOSeat3"></div>
+                <div class="poker-you pk-cell-s">
+                  <div class="poker-hole-label">Your four cards</div>
+                  <div class="poker-hole" id="pkOHole"></div>
+                  <div class="poker-actions" id="pkOActions"></div>
+                </div>
+              </div>
+            </div>
+            <div class="poker-result-backdrop" id="pkOResultBackdrop" hidden>
+              <div
+                class="poker-result-dialog"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="pkOResultTitle"
+              >
+                <h3 id="pkOResultTitle" class="poker-result-title">Hand result</h3>
+                <p class="poker-result-text" id="pkOResultText"></p>
+                <button type="button" class="btn" id="pkOResultOk">OK</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: GEOGRAPHY =============== -->
+        <section class="panel" id="panel-geo" aria-label="Geography games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Geography</h1>
+              <p class="cat-sub muted">Countries & U.S. states on the map.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="map-select" aria-label="Map quiz">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🗺</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Map quiz</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: BOARD =============== -->
+        <section class="panel" id="panel-board" aria-label="Board games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Board</h1>
+              <p class="cat-sub muted">Chess, checkers, puzzles & peg solitaire.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="orchid" data-goto-tab="chess" aria-label="Chess puzzles">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♞</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Chess puzzles</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="coral" data-goto-tab="chessplay" aria-label="Chess">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♔</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Chess</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="checkers" aria-label="Checkers">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⬤</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Checkers</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="sun" data-goto-tab="ttt" aria-label="Tic tac toe">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">✕</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Tic tac toe</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="lime" data-goto-tab="cracker" aria-label="Cracker Barrel peg solitaire">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🔺</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Cracker Barrel</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: FLASH =============== -->
+        <section class="panel" id="panel-flash" aria-label="Flash style games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Flash</h1>
+              <p class="cat-sub muted">Arcade-style picks.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="lime" data-goto-tab="curveball" aria-label="Curveball">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🎾</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Curveball</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: PRODUCTIVITY =============== -->
+        <section class="panel" id="panel-productivity" aria-label="Productivity">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Productivity</h1>
+              <p class="cat-sub muted">Graph & scientific calculator.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="sky" data-goto-tab="graphcalc" aria-label="Graphing calculator">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">📈</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Graphing calculator</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="coral" data-goto-tab="calculator" aria-label="Scientific calculator">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🔢</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Scientific calculator</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== GRAPHING CALCULATOR =============== -->
+        <section class="panel" id="panel-graphcalc" aria-label="Graphing calculator">
+          <div class="graphcalc-wrap">
+            <header class="graphcalc-topbar">
+              <div class="graphcalc-topbar-start">
+                <button type="button" class="btn ghost graphcalc-back" data-goto-tab="productivity">← Productivity</button>
+                <h2 class="graphcalc-title">Graphing calculator</h2>
+              </div>
+            </header>
+            <div class="graphcalc-main">
+              <aside class="graphcalc-sidebar" aria-label="Expressions and window">
+                <div class="graphcalc-expr-list" role="list">
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="0" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr0"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 1 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="1" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr1"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 2 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="2" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr2"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 3 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="3" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr3"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 4 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="4" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr4"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 5 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                  <div class="graphcalc-expr-row" role="listitem">
+                    <span class="graphcalc-color-dot" data-graphcalc-line="5" aria-hidden="true"></span>
+                    <label class="graphcalc-expr-label">
+                      <input
+                        type="text"
+                        id="graphcalcExpr5"
+                        class="graphcalc-expr-input"
+                        spellcheck="false"
+                        autocomplete="off"
+                        value=""
+                        aria-label="Equation 6 (e.g. y=… or x=…)"
+                      />
+                    </label>
+                  </div>
+                </div>
+                <div class="graphcalc-window-section">
+                  <div class="graphcalc-section-title">Window</div>
+                  <div class="graphcalc-window-grid">
+                    <label class="graphcalc-mini-field">
+                      <span class="graphcalc-mini-lbl">x min</span>
+                      <input type="text" id="graphcalcXMin" class="graphcalc-mini-input" inputmode="decimal" value="-10" />
+                    </label>
+                    <label class="graphcalc-mini-field">
+                      <span class="graphcalc-mini-lbl">x max</span>
+                      <input type="text" id="graphcalcXMax" class="graphcalc-mini-input" inputmode="decimal" value="10" />
+                    </label>
+                    <label class="graphcalc-mini-field">
+                      <span class="graphcalc-mini-lbl">y min</span>
+                      <input type="text" id="graphcalcYMin" class="graphcalc-mini-input" inputmode="decimal" value="-10" />
+                    </label>
+                    <label class="graphcalc-mini-field">
+                      <span class="graphcalc-mini-lbl">y max</span>
+                      <input type="text" id="graphcalcYMax" class="graphcalc-mini-input" inputmode="decimal" value="10" />
+                    </label>
+                  </div>
+                  <label class="graphcalc-auto">
+                    <input type="checkbox" id="graphcalcAutoY" checked />
+                    <span>Auto-fit <strong>y</strong></span>
+                  </label>
+                </div>
+                <div class="graphcalc-sidebar-actions">
+                  <button type="button" class="btn graphcalc-btn-primary" id="graphcalcPlotBtn">Plot</button>
+                  <button type="button" class="btn ghost graphcalc-btn-fit" id="graphcalcFitBtn">Fit</button>
+                </div>
+                <p id="graphcalcErr" class="graphcalc-err" role="status" aria-live="polite"></p>
+                <p class="graphcalc-sidebar-hint muted">
+                  Up to <strong>6</strong> graphs (colors: blue → red → green → purple → orange → yellow). Type
+                  <code>y=…</code> for <strong>y vs x</strong>, <code>x=…</code> for <strong>x vs y</strong> (right-hand side uses
+                  <code>x</code> or <code>y</code> accordingly), or a bare expression as <code>y=f(x)</code>. Functions:
+                  <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>sqrt</code>, <code>ln</code>, <code>log</code>,
+                  <code>^</code>, <code>pi</code>, <code>e</code>.
+                </p>
+                <div class="graphcalc-sidebar-game" aria-label="Ball and cup mini-game">
+                  <label class="graphcalc-game-switch" for="graphcalcGameModeSwitch">
+                    <span class="graphcalc-game-switch-label">Game mode</span>
+                    <span class="graphcalc-game-switch-track">
+                      <input
+                        type="checkbox"
+                        id="graphcalcGameModeSwitch"
+                        role="switch"
+                        aria-checked="false"
+                      />
+                      <span class="graphcalc-game-switch-thumb" aria-hidden="true"></span>
+                    </span>
+                  </label>
+                </div>
+              </aside>
+              <div class="graphcalc-graph-pane">
+                <div class="graphcalc-stage-wrap">
+                  <canvas id="graphcalcCanvas" width="900" height="480" aria-label="Function plot"></canvas>
+                  <div class="graphcalc-play-dock" id="graphcalcPlayDock" hidden>
+                    <p id="graphcalcGameStatus" class="graphcalc-game-status muted" aria-live="polite"></p>
+                    <button type="button" class="btn graphcalc-play-btn" id="graphcalcPlayBtn">Play</button>
+                  </div>
+                  <div class="graphcalc-zoom-stack" aria-label="Zoom">
+                    <button type="button" class="graphcalc-zoom-btn" id="graphcalcZoomInBtn" title="Zoom in">+</button>
+                    <button type="button" class="graphcalc-zoom-btn" id="graphcalcZoomOutBtn" title="Zoom out">−</button>
+                  </div>
+                  <p class="graphcalc-drag-hint muted">Drag to pan · wheel to zoom</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== SCIENTIFIC CALCULATOR =============== -->
+        <section class="panel" id="panel-calculator" aria-label="Scientific calculator">
+          <div class="calc-wrap">
+            <header class="calc-topbar">
+              <button type="button" class="btn ghost calc-back" data-goto-tab="productivity">← Productivity</button>
+              <h2 class="calc-title">Scientific calculator</h2>
+              <div class="calc-angle-toggle" role="group" aria-label="Angle units for trig">
+                <button type="button" class="calc-angle-btn" id="calcDegBtn" aria-pressed="true">Deg</button>
+                <button type="button" class="calc-angle-btn" id="calcRadBtn" aria-pressed="false">Rad</button>
+              </div>
+            </header>
+            <div class="calc-body">
+              <div class="calc-display-stack">
+                <div class="calc-mem-badge muted" id="calcMemBadge" aria-live="polite"></div>
+                <input
+                  type="text"
+                  id="calcDisplayInput"
+                  class="calc-display-input"
+                  readonly
+                  autocomplete="off"
+                  spellcheck="false"
+                  inputmode="none"
+                  aria-label="Calculator expression"
+                  placeholder="0"
+                />
+              </div>
+              <div class="calc-keys" id="calcKeysRoot"></div>
+              <p class="calc-hint muted">
+                Use <code>*</code> and <code>/</code> where needed; <code>3pi</code>, <code>pi3</code>, and <code>pi(3)</code> insert
+                multiplication automatically. Type <code>pi</code> or use π. Open parentheses at the end close when you press Enter. Keys:
+                <kbd>Enter</kbd> equals · <kbd>Esc</kbd> clear · <kbd>⌫</kbd> delete.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: TINKERING =============== -->
+        <section class="panel" id="panel-tinkering" aria-label="Tinkering">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Tinkering</h1>
+              <p class="cat-sub muted">Small calculators and tools.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="resistor" aria-label="Resistor color code decoder">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⚡</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Resistor decoder</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== RESISTOR DECODER =============== -->
+        <section class="panel" id="panel-resistor" aria-label="Resistor color code decoder">
+          <div class="resistor-wrap">
+            <header class="resistor-topbar">
+              <button type="button" class="btn ghost resistor-back" data-goto-tab="tinkering">← Tinkering</button>
+              <h2 class="resistor-title">Resistor decoder</h2>
+            </header>
+            <div class="resistor-nc" role="group" aria-label="Number of bands">
+              <div class="resistor-nc-btns" id="resistorBandCountBtns"></div>
+            </div>
+            <div class="resistor-readout">
+              <p class="resistor-out" id="resistorOut" aria-live="polite"></p>
+              <p class="resistor-extra muted" id="resistorExtra" aria-live="polite"></p>
+            </div>
+            <div id="resistorVisual" class="resistor-visual" aria-label="Resistor illustration"></div>
+            <p class="resistor-hint muted" id="resistorHint" role="status" aria-live="polite"></p>
+            <div class="resistor-act-bar">
+              <button type="button" class="btn ghost" id="resistorClear" disabled>Clear</button>
+            </div>
+            <div class="resistor-columns-scroll">
+              <div id="resistorColumns" class="resistor-columns" aria-label="Color pickers"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CATEGORY: MISC =============== -->
+        <section class="panel" id="panel-misc" aria-label="Other games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="home">← Home</button>
+              <h1 class="cat-title">Misc</h1>
+              <p class="cat-sub muted">Quick skill tests.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="orchid" data-goto-tab="typing" aria-label="Typing speed test">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⌨</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Typing</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="coral" data-goto-tab="reaction" aria-label="Reaction time test">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">⚡</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Reaction</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== WORDLE =============== -->
+        <section class="panel" id="panel-wordle">
+          <div class="wordle-wrap">
+            <div class="wordle-header">
+              <div class="wordle-header-spacer" aria-hidden="true"></div>
+              <div class="wordle-header-titles">
+                <h1>WORDLE</h1>
+                <div class="wordle-sub" id="wordleSub">Guess the five-letter word</div>
+              </div>
+              <button class="icon-btn" id="howToBtn" type="button" title="How to play">?</button>
+            </div>
+
+            <div class="board" id="board" aria-label="Guess grid"></div>
+
+            <div class="message" id="message" role="status" aria-live="polite"></div>
+
+            <div class="keyboard" id="keyboard" aria-label="Letter keyboard"></div>
+
+            <div class="wordle-actions">
+              <button class="btn ghost" id="newGameBtn">New game</button>
+              <button class="btn ghost" id="giveUpBtn">Give up</button>
+            </div>
+
+            <section class="stats-panel" aria-label="Statistics">
+              <header class="stats-head">
+                <h3>Statistics</h3>
+              </header>
+              <div class="stat-grid">
+                <div><div class="stat-num" id="statPlayed">0</div><div class="stat-label">Played</div></div>
+                <div><div class="stat-num" id="statWins">0</div><div class="stat-label">Win %</div></div>
+                <div><div class="stat-num" id="statStreak">0</div><div class="stat-label">Streak</div></div>
+                <div><div class="stat-num" id="statMax">0</div><div class="stat-label">Max</div></div>
+              </div>
+              <details class="dist-wrap">
+                <summary>Guess distribution</summary>
+                <div class="dist" id="dist"></div>
+              </details>
+            </section>
+
+            <section class="bot-panel" id="botPanel" aria-label="Guess analysis" hidden>
+              <header class="bot-head">
+                <h3>Guess analysis</h3>
+                <p class="bot-sub">How much each guess narrowed the possibilities.</p>
+              </header>
+              <div id="botBody" class="bot-body"></div>
+              <p class="bot-foot">
+                Skill = your expected info ÷ optimal expected info.
+                Luck = actual info − expected info.
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <!-- =============== TYPING =============== -->
+        <section class="panel" id="panel-typing">
+          <div class="typing-wrap">
+            <div class="typing-header">
+              <h2>Typing Speed Test</h2>
+              <p class="muted">Just start typing — the timer starts on your first key.</p>
+            </div>
+
+            <div class="typing-stats">
+              <div><div class="typing-stat-num" id="typingTime">30</div><div class="typing-stat-label">seconds</div></div>
+              <div><div class="typing-stat-num" id="typingWPM">0</div><div class="typing-stat-label">WPM</div></div>
+              <div><div class="typing-stat-num" id="typingAcc">100</div><div class="typing-stat-label">accuracy</div></div>
+              <div><div class="typing-stat-num" id="typingBest">—</div><div class="typing-stat-label">best</div></div>
+            </div>
+
+            <div class="typing-text" id="typingText" tabindex="0" aria-label="Typing test text">
+              <div class="typing-text-inner" id="typingTextInner"></div>
+            </div>
+
+            <div class="typing-controls">
+              <label class="typing-label">
+                Duration
+                <select id="typingDuration">
+                  <option value="15">15 s</option>
+                  <option value="30" selected>30 s</option>
+                  <option value="60">60 s</option>
+                </select>
+              </label>
+              <button class="btn ghost" id="typingRestart">Restart</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CHESS =============== -->
+        <section class="panel" id="panel-chess">
+          <div class="chess-wrap">
+            <div class="chess-header">
+              <h2>Chess Puzzles</h2>
+              <p class="muted" id="chessPrompt">Mate in 1 — White to move.</p>
+            </div>
+
+            <div class="chess-board" id="chessBoard" aria-label="Chess board"></div>
+
+            <div class="chess-status" id="chessStatus">Click a piece, then click its target square.</div>
+
+            <div class="chess-controls">
+              <button class="btn ghost" id="chessHintBtn">Hint</button>
+              <button class="btn ghost" id="chessSolveBtn">Show solution</button>
+              <button class="btn ghost" id="chessNextBtn">Next puzzle ▸</button>
+            </div>
+
+            <div class="chess-meta">
+              <span id="chessIndex">Puzzle 1 of 6</span>
+              <span>·</span>
+              <span>Solved: <span id="chessSolved">0</span></span>
+              <span>·</span>
+              <span>Best streak: <span id="chessStreak">0</span></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== CHESS (full game) =============== -->
+        <section class="panel" id="panel-chessplay" aria-label="Chess">
+          <div class="chessplay-wrap">
+            <div class="chessplay-header">
+              <p class="muted" style="margin: 0 0 8px">
+                <button type="button" class="btn ghost" data-goto-tab="board">← Board</button>
+              </p>
+              <h2>Chess</h2>
+              <p class="muted">
+                You play <strong>White</strong> vs the computer (<strong>Black</strong>) by default. Click a piece, then a highlighted square. Castling: select the king, then
+                g1 (kingside) or c1 (queenside). En passant, promotion to <strong>queen</strong>, 50‑move, mate and stalemate are handled.
+                For two players on a network, use <strong>Play online</strong> below (run <code>npm run rooms</code> from the project, or your hosted <code>wss://</code> URL).
+              </p>
+            </div>
+            <div class="chessplay-settings" id="chessplaySettings">
+              <label class="checkers-set">
+                <span class="checkers-set-lbl">CPU level</span>
+                <select id="chessplayDiff" aria-label="Chess engine depth, 1 (easiest) to 5 (strongest)">
+                  <option value="1">1 — easiest</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 — strongest</option>
+                </select>
+              </label>
+            </div>
+            <div class="chess-board" id="chessPlayBoard" aria-label="Chess board, you are White"></div>
+            <div class="chess-status" id="chessPlayStatus" role="status">Loading…</div>
+            <div class="chess-controls">
+              <button class="btn ghost" type="button" id="chessPlayNew">New game</button>
+              <button class="btn ghost" type="button" id="chessPlayLeaveNet" style="display: none">Leave online</button>
+            </div>
+            <section class="bic-lobby" data-bic-game="chess" aria-label="Online chess">
+              <h3 class="bic-lobby-title">Play online</h3>
+              <p class="bic-lobby-intro muted">
+                WebSocket room server (default <code>ws://localhost:3333</code>). <strong>Host plays White;</strong> guest plays Black. Share the room code.
+              </p>
+              <div class="biconline-form">
+                <label class="biconline-lbl">
+                  <span>Room server</span>
+                  <input type="text" data-bic-role="ws-url" class="biconline-input" spellcheck="false" autocomplete="off" />
+                </label>
+              </div>
+              <p data-bic-role="status" class="biconline-stat" role="status" aria-live="polite">Choose create or join.</p>
+              <p data-bic-role="room-code" class="biconline-code" aria-label="Room code"></p>
+              <div class="biconline-actions">
+                <button type="button" class="btn" data-bic-role="create">Create room</button>
+              </div>
+              <div class="biconline-join">
+                <input
+                  type="text"
+                  data-bic-role="join-code"
+                  class="biconline-input biconline-input--code"
+                  maxlength="8"
+                  placeholder="Room code"
+                  aria-label="Room code to join"
+                />
+                <button type="button" class="btn ghost" data-bic-role="join-btn">Join room</button>
+              </div>
+              <div class="biconline-go">
+                <button type="button" class="btn" data-bic-role="go-game" hidden>Go to board</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- =============== CHECKERS =============== -->
+        <section class="panel" id="panel-checkers">
+          <div class="checkers-wrap">
+            <div class="checkers-header">
+              <p class="muted" style="margin: 0 0 8px">
+                <button type="button" class="btn ghost" data-goto-tab="board">← Board</button>
+              </p>
+              <h2>Checkers</h2>
+              <p class="muted" id="checkersRulesBlurb">
+                You play <strong>red</strong> (bottom, moving up). <strong>Black</strong> is the computer by default.
+                Men move diagonally forward. Kings move one step diagonally in any direction. Crowned (king row) mid-jump ends the turn.
+                <span id="checkersForcedNote">With <strong>forced capture</strong> on, jumps are required and you must take the most captures in one turn when jumping.</span>
+                For two players online, use <strong>Play online</strong> below (<strong>host = red</strong>).
+              </p>
+            </div>
+            <div class="checkers-settings" id="checkersSettings">
+              <label class="checkers-set">
+                <span class="checkers-set-lbl">CPU level</span>
+                <select id="checkersCpu" aria-label="CPU level from 1 (easiest) to 5 (strongest)">
+                  <option value="1">1 — easiest</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 — strongest</option>
+                </select>
+              </label>
+              <label class="checkers-set checkers-set--tick">
+                <input type="checkbox" id="checkersForced" checked />
+                <span>Forced capture</span>
+              </label>
+            </div>
+            <div class="checkers-board" id="checkersBoard" aria-label="Checkers board"></div>
+            <div class="checkers-status" id="checkersStatus" role="status">Your move.</div>
+            <div class="checkers-meta muted" id="checkersMeta"></div>
+            <div class="checkers-controls">
+              <button class="btn ghost" type="button" id="checkersNewBtn">New game</button>
+              <button class="btn ghost" type="button" id="checkersLeaveNet" style="display: none">Leave online</button>
+            </div>
+            <section class="bic-lobby" data-bic-game="checkers" aria-label="Online checkers">
+              <h3 class="bic-lobby-title">Play online</h3>
+              <p class="bic-lobby-intro muted">
+                Same WebSocket server as chess. <strong>Host plays red;</strong> guest plays black (top). Forced capture can be set for new rooms you create.
+              </p>
+              <div class="biconline-form">
+                <label class="biconline-lbl">
+                  <span>Room server</span>
+                  <input type="text" data-bic-role="ws-url" class="biconline-input" spellcheck="false" autocomplete="off" />
+                </label>
+              </div>
+              <p data-bic-role="status" class="biconline-stat" role="status" aria-live="polite">Choose create or join.</p>
+              <p data-bic-role="room-code" class="biconline-code" aria-label="Room code"></p>
+              <p class="muted biconline-hint">Forced capture applies to both players in new checkers rooms.</p>
+              <label class="biconline-cb">
+                <input type="checkbox" data-bic-role="forced-cb" checked />
+                <span>Forced capture (new rooms)</span>
+              </label>
+              <div class="biconline-actions">
+                <button type="button" class="btn" data-bic-role="create">Create room</button>
+              </div>
+              <div class="biconline-join">
+                <input
+                  type="text"
+                  data-bic-role="join-code"
+                  class="biconline-input biconline-input--code"
+                  maxlength="8"
+                  placeholder="Room code"
+                  aria-label="Room code to join"
+                />
+                <button type="button" class="btn ghost" data-bic-role="join-btn">Join room</button>
+              </div>
+              <div class="biconline-go">
+                <button type="button" class="btn" data-bic-role="go-game" hidden>Go to board</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <!-- =============== CURVEBALL =============== -->
+        <section class="panel" id="panel-curveball">
+          <div class="curveball-wrap">
+            <div class="curveball-header">
+              <h2>Curveball</h2>
+              <p class="muted">
+                Like the Flash game: move the mouse to steer your paddle. <strong>Click</strong> to serve (ball starts from your paddle).
+                Hit <strong>off-center</strong> for angle, and <strong>move the paddle as you hit</strong> to put spin on the ball — it will curve in flight.
+              </p>
+            </div>
+            <div class="curveball-settings" id="curveballSettings">
+              <label class="curveball-set">
+                <span class="curveball-set-lbl">Difficulty</span>
+                <select id="curveballDiff" aria-label="Curveball difficulty 1 to 5">
+                  <option value="1">1 — easiest</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 — hardest</option>
+                </select>
+              </label>
+            </div>
+            <div class="curveball-stats">
+              <div class="curveball-stat you"><span class="cb-label">You</span><span class="cb-num" id="curveYou">0</span></div>
+              <div class="curveball-stat opp"><span class="cb-label">Opponent</span><span class="cb-num" id="curveOpp">0</span></div>
+            </div>
+            <div class="curveball-canvas-wrap">
+              <canvas id="curveballCanvas" width="720" height="500"></canvas>
+              <div class="curveball-overlay" id="curveballOverlay">
+                <div class="curveball-overlay-inner">
+                  <h3 id="curveTitle">Click to start</h3>
+                  <p id="curveSub">First to 5 wins.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== SOLITAIRE (subgroup) =============== -->
+        <section class="panel card-scene" id="panel-solitaire" aria-label="Solitaire games">
+          <div class="cat-wrap">
+            <div class="cat-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="card">← Cards</button>
+              <h1 class="cat-title">Solitaire</h1>
+              <p class="cat-sub muted">Klondike foundations · Spider runs.</p>
+            </div>
+            <div class="home-grid">
+              <button type="button" class="home-tile" data-cap="mint" data-goto-tab="solitaire-klondike" aria-label="Klondike solitaire">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">♠</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Klondike</span></span>
+              </button>
+              <button type="button" class="home-tile" data-cap="orchid" data-goto-tab="solitaire-spider" aria-label="Spider solitaire">
+                <span class="home-tile-cap"><span class="home-tile-symbol" aria-hidden="true">🕷</span></span>
+                <span class="home-tile-foot"><span class="home-tile-title">Spider</span></span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== SOLITAIRE — KLONDIKE =============== -->
+        <section class="panel card-scene" id="panel-solitaire-klondike">
+          <div class="solitaire-wrap">
+            <aside class="solitaire-side">
+              <div class="solitaire-header">
+                <p class="solitaire-back muted">
+                  <button type="button" class="btn ghost" data-goto-tab="solitaire">← Solitaire</button>
+                </p>
+                <h2>Klondike</h2>
+                <p class="muted">Build the four foundations from A to K. Drag cards to move them, or click to select then click a destination. Double-click sends a card to its foundation. Click the deck to deal — when empty, click again to recycle.</p>
+              </div>
+
+              <div class="solitaire-stats">
+                <div><div class="sol-stat-num" id="solMoves">0</div><div class="sol-stat-label">moves</div></div>
+                <div><div class="sol-stat-num" id="solWins">0</div><div class="sol-stat-label">wins</div></div>
+                <button class="btn ghost" id="solModeBtn" title="Toggle draw count">Easy · draw 1</button>
+                <button class="btn ghost" id="solNewBtn">New game</button>
+              </div>
+
+              <div class="sol-status" id="solStatus"></div>
+            </aside>
+
+            <div class="solitaire-board">
+              <div class="solitaire-top">
+                <div class="sol-slot" id="solStock"></div>
+                <div class="sol-slot" id="solWaste"></div>
+                <div class="sol-slot sol-spacer"></div>
+                <div class="sol-slot" id="solFoundS"></div>
+                <div class="sol-slot" id="solFoundH"></div>
+                <div class="sol-slot" id="solFoundD"></div>
+                <div class="sol-slot" id="solFoundC"></div>
+              </div>
+
+              <div class="solitaire-tableau" id="solTableau">
+                <div class="sol-col" data-col="0"></div>
+                <div class="sol-col" data-col="1"></div>
+                <div class="sol-col" data-col="2"></div>
+                <div class="sol-col" data-col="3"></div>
+                <div class="sol-col" data-col="4"></div>
+                <div class="sol-col" data-col="5"></div>
+                <div class="sol-col" data-col="6"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== SOLITAIRE — SPIDER =============== -->
+        <section class="panel card-scene" id="panel-solitaire-spider" aria-label="Spider solitaire">
+          <div class="spider-wrap solitaire-wrap">
+            <aside class="solitaire-side">
+              <div class="solitaire-header">
+                <p class="solitaire-back muted">
+                  <button type="button" class="btn ghost" data-goto-tab="solitaire">← Solitaire</button>
+                </p>
+                <h2>Spider</h2>
+                <p class="muted">Build <strong>descending runs in the same suit</strong> (king down to ace). When a full suit is built, it clears. Deal from the stock (50 cards) in sets of 10 only when <strong>no column is empty</strong>. Clear all 8 suits to win.</p>
+              </div>
+              <div class="solitaire-stats">
+                <div><div class="sol-stat-num" id="spiMoves">0</div><div class="sol-stat-label">moves</div></div>
+                <div><div class="sol-stat-num" id="spiWins">0</div><div class="sol-stat-label">wins</div></div>
+                <div><div class="sol-stat-num" id="spiSuits">0/8</div><div class="sol-stat-label">suits</div></div>
+                <div><div class="sol-stat-num" id="spiStockN">50</div><div class="sol-stat-label">in stock</div></div>
+                <button class="btn ghost" type="button" id="spiNewBtn">New game</button>
+              </div>
+              <div class="sol-status" id="spiStatus"></div>
+            </aside>
+            <div class="spider-board solitaire-board">
+              <div class="spider-top">
+                <div class="spider-stock-slot" id="spiStock" title="Click to deal 10 cards (1 per column) if no column is empty"></div>
+                <div class="spider-foundation-row" id="spiCompleted" aria-label="Completed suits"></div>
+              </div>
+              <div class="spider-tableau" id="spiTableau">
+                <div class="sol-col spider-col" data-col="0"></div>
+                <div class="sol-col spider-col" data-col="1"></div>
+                <div class="sol-col spider-col" data-col="2"></div>
+                <div class="sol-col spider-col" data-col="3"></div>
+                <div class="sol-col spider-col" data-col="4"></div>
+                <div class="sol-col spider-col" data-col="5"></div>
+                <div class="sol-col spider-col" data-col="6"></div>
+                <div class="sol-col spider-col" data-col="7"></div>
+                <div class="sol-col spider-col" data-col="8"></div>
+                <div class="sol-col spider-col" data-col="9"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== SPADES =============== -->
+        <section class="panel card-scene" id="panel-spades">
+          <div class="spades-wrap">
+            <aside class="spades-side">
+              <div class="spades-header">
+                <h2>Spades</h2>
+                <p class="muted">Partnership trick-taking with three bots. You and North play together against East &amp; West. Bid the tricks you'll take, follow suit, spades are trump and can't lead until "broken". First team to 500 wins.</p>
+              </div>
+
+              <div class="spades-stats">
+                <div class="sp-team">
+                  <div class="sp-team-name">Us</div>
+                  <div class="sp-team-score" id="spScoreUs">0</div>
+                  <div class="sp-team-bags" id="spBagsUs">0 bags</div>
+                </div>
+                <div class="sp-team">
+                  <div class="sp-team-name">Them</div>
+                  <div class="sp-team-score" id="spScoreThem">0</div>
+                  <div class="sp-team-bags" id="spBagsThem">0 bags</div>
+                </div>
+                <div class="sp-round" id="spRound">Round 1</div>
+                <button class="btn ghost" id="spNewBtn">New game</button>
+              </div>
+
+              <div class="sp-status" id="spStatus"></div>
+            </aside>
+
+            <div class="spades-board">
+              <div class="sp-seat sp-north" id="spSeatN">
+                <div class="sp-seat-label"><span class="sp-name">North · partner</span><span class="sp-tricks" id="spTricksN">—</span></div>
+                <div class="sp-hand" id="spHandN"></div>
+              </div>
+              <div class="sp-table">
+                <div class="sp-seat sp-west" id="spSeatW">
+                  <div class="sp-seat-label"><span class="sp-name">West</span><span class="sp-tricks" id="spTricksW">—</span></div>
+                  <div class="sp-hand" id="spHandW"></div>
+                </div>
+                <div class="sp-trick-area" id="spTrick"></div>
+                <div class="sp-seat sp-east" id="spSeatE">
+                  <div class="sp-seat-label"><span class="sp-name">East</span><span class="sp-tricks" id="spTricksE">—</span></div>
+                  <div class="sp-hand" id="spHandE"></div>
+                </div>
+              </div>
+              <div class="sp-seat sp-south" id="spSeatS">
+                <div class="sp-seat-label"><span class="sp-name">You</span><span class="sp-tricks" id="spTricksS">—</span></div>
+                <div class="sp-hand" id="spHandS"></div>
+                <div class="sp-bid-ui" id="spBidUI"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== MAP QUIZ: REGION PICKER =============== -->
+        <section class="panel" id="panel-map-select" aria-label="Map quiz — choose a region">
+          <div class="map-select-wrap">
+            <div class="map-select-head">
+              <button type="button" class="cat-back btn ghost" data-goto-tab="geo">← Geography</button>
+              <h1 class="map-select-title" id="mapSelectTitle">Map quiz</h1>
+              <p class="map-select-sub muted">Pick a region, then a mode. Only <strong>Countries</strong> is available for now.</p>
+            </div>
+            <div class="map-select-grid" id="mapSelectGrid" aria-label="Regions">
+              <article class="map-select-card" data-bic-card-region="europe">
+                <div class="map-select-card-label">Europe</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="880 30 720 400" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="europe" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="northamerica">
+                <div class="map-select-card-label">North America</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="50 50 900 500" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="northamerica" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="southamerica">
+                <div class="map-select-card-label">South America</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="480 300 450 540" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="southamerica" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="world">
+                <div class="map-select-card-label">World</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="0 0 2000 857" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="world" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="africa">
+                <div class="map-select-card-label">Africa</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="920 280 500 520" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="africa" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="asia">
+                <div class="map-select-card-label">Asia</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="1050 40 950 600" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="asia" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="oceania">
+                <div class="map-select-card-label">Oceania</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="1500 360 500 480" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/world.svg" x="0" y="0" width="2000" height="857" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="oceania" data-goto-tab="map">Countries</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+              <article class="map-select-card" data-bic-card-region="us">
+                <div class="map-select-card-label">The U.S.</div>
+                <div class="map-select-thumb" aria-hidden="true">
+                  <svg class="map-select-thumb-svg" viewBox="0 0 1000 589" preserveAspectRatio="xMidYMid meet">
+                    <image href="Map SVGs/us.svg" x="0" y="0" width="1000" height="589" />
+                  </svg>
+                </div>
+                <p class="map-select-best muted" aria-label="Your best on a full clear">—</p>
+                <div class="map-select-rows">
+                  <button type="button" class="map-select-row" data-bic-map-preset="us" data-goto-tab="map">States</button>
+                  <button type="button" class="map-select-row" disabled aria-disabled="true" title="Coming soon">Capitals</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== MAP QUIZ =============== -->
+        <section class="panel" id="panel-map">
+          <div class="map-quiz-wrap">
+            <div class="map-quiz-top">
+              <h2 class="map-quiz-h2" id="mapQuizHeaderTitle">Map quiz</h2>
+              <p class="muted map-quiz-top-actions">
+                <button type="button" class="btn ghost map-quiz-back-btn" data-goto-tab="map-select">← Change region</button>
+              </p>
+              <p class="muted">
+                Find the place named above (country, island group, or U.S. state). You have <strong>four wrong guesses</strong> before the answer is revealed.
+                A wrong place <strong>flashes red</strong> (three quick pulses) each time. The one you&rsquo;re looking for, once found, turns <strong>white</strong> if you had no wrong guesses, or yellow through red if you did — with no flash; after the answer is revealed, that area
+                <strong>flashes red</strong> three times, then stays dark red. Solved and revealed items
+                <strong>stay on the map for the rest of the game</strong> (Reset clears them).
+              </p>
+            </div>
+
+            <div class="map-quiz-prompt" aria-live="polite">
+              <span class="map-quiz-prompt-label">Find:</span>
+              <span class="map-quiz-prompt-name" id="mapQuizTarget">—</span>
+              <button class="btn ghost map-quiz-skip-btn" type="button" id="mapQuizSkipBtn" title="Next country (streak reset)">Skip</button>
+            </div>
+
+            <div class="map-quiz-surface" id="mapQuizSvg" title="Scroll or pinch to zoom. Drag to pan."></div>
+            <p class="muted map-quiz-pan-hint" aria-hidden="true">Scroll to zoom · drag to pan</p>
+            <div class="map-quiz-guesses muted" id="mapQuizGuesses" aria-live="polite">Guesses left: —</div>
+            <div class="map-quiz-status" id="mapQuizStatus" role="status"></div>
+
+            <div class="map-quiz-hud">
+              <div>
+                <div class="map-quiz-hud-val" id="mapQuizScore">0</div>
+                <div class="map-quiz-hud-lbl">score</div>
+              </div>
+              <div>
+                <div class="map-quiz-hud-val" id="mapQuizStreak">0</div>
+                <div class="map-quiz-hud-lbl">streak</div>
+              </div>
+              <div>
+                <div class="map-quiz-hud-val" id="mapQuizBest">0</div>
+                <div class="map-quiz-hud-lbl">best streak</div>
+              </div>
+              <div>
+                <div class="map-quiz-hud-round" id="mapQuizRound">Round 1</div>
+                <div class="map-quiz-hud-lbl">progress</div>
+              </div>
+              <div class="map-quiz-hud-actions">
+                <button class="btn ghost" type="button" id="mapQuizNewBtn">Reset</button>
+              </div>
+            </div>
+            <p class="map-quiz-future muted">Map: <code>Map SVGs/world.svg</code> / <code>Map SVGs/us.svg</code> (Simplemaps). Regional rounds use a UN region map over ISO codes.</p>
+
+            <div
+              class="map-quiz-victory"
+              id="mapQuizVictory"
+              hidden
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="mapQuizVictoryTitle"
+            >
+              <div class="map-quiz-victory-card">
+                <h3 class="map-quiz-victory-title" id="mapQuizVictoryTitle">Map complete</h3>
+                <p class="map-quiz-victory-lead muted" id="mapQuizVictoryLead"></p>
+                <div class="map-quiz-victory-stats" id="mapQuizVictoryStats" aria-live="polite"></div>
+                <div class="map-quiz-victory-actions">
+                  <button type="button" class="btn" id="mapQuizVictoryAgain">Play again</button>
+                  <button
+                    type="button"
+                    class="btn ghost"
+                    id="mapQuizVictoryChangeRegion"
+                    data-goto-tab="map-select"
+                  >
+                    Change region
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =============== NERDLE =============== -->
+        <section class="panel" id="panel-nerdle" aria-label="Nerdle">
+          <div class="nd-wrap">
+            <header class="nd-head">
+              <h2>Nerdle</h2>
+              <p class="muted">
+                Guess the hidden <strong>eight-character true equation</strong> in six tries. Numbers, <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> <kbd>=</kbd> only —
+                PEMDAS applies on each side of the equals sign.
+              </p>
+            </header>
+            <div class="nd-board-wrap">
+              <div class="nd-board board" id="ndBoard" aria-label="Equation grid"></div>
+            </div>
+            <p class="message" id="ndMsg" role="status" aria-live="polite"></p>
+            <div class="nd-keyboard keyboard" id="ndKb" aria-label="Equation keypad"></div>
+            <div class="nd-actions wordle-actions">
+              <button class="btn ghost" type="button" id="ndNewBtn">New puzzle</button>
+            </div>
+            <section class="stats-panel nd-stats-panel" aria-label="Nerdle statistics">
+              <header class="stats-head">
+                <h3>Statistics</h3>
+              </header>
+              <div class="stat-grid">
+                <div><div class="stat-num" id="ndStatPlayed">0</div><div class="stat-label">Played</div></div>
+                <div><div class="stat-num" id="ndStatWin">0</div><div class="stat-label">Win %</div></div>
+                <div><div class="stat-num" id="ndStatStreak">0</div><div class="stat-label">Streak</div></div>
+                <div><div class="stat-num" id="ndStatMax">0</div><div class="stat-label">Max</div></div>
+              </div>
+              <details class="dist-wrap">
+                <summary>Guess distribution</summary>
+                <div class="dist" id="ndDist"></div>
+              </details>
+            </section>
+            <section class="bot-panel" id="ndBotPanel" aria-label="Nerdle bot" hidden>
+              <header class="bot-head">
+                <h3>Nerdle Bot</h3>
+                <p class="bot-sub">Tracks remaining valid equations and suggests strong next guesses.</p>
+              </header>
+              <div id="ndBotBody" class="bot-body"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- =============== QUINTESSENTIAL =============== -->
+        <section class="panel" id="panel-quintessential" aria-label="Quintessential">
+          <div class="wordle-wrap quintessential-theme">
+            <div class="wordle-header">
+              <div class="wordle-header-spacer" aria-hidden="true"></div>
+              <div class="wordle-header-titles">
+                <h1>QUINTESSENTIAL</h1>
+                <p class="wordle-sub qb-theme-banner" id="qbTheme" aria-live="polite">—</p>
+                <div class="wordle-sub qb-msg-spacer" id="qbMsg" aria-hidden="true"></div>
+                <div class="wordle-sub qb-par-line"><span id="qbMoves">0/8</span></div>
+              </div>
+              <div class="wordle-header-spacer" aria-hidden="true"></div>
+            </div>
+            <div class="board qb-board" id="qbGrid" aria-label="Letter swap grid"></div>
+            <div class="wordle-actions">
+              <button class="btn ghost" type="button" id="qbNewBtn">New puzzle</button>
+            </div>
+            <section class="bot-panel" id="qbBotPanel" aria-label="Quintessential bot" hidden>
+              <header class="bot-head">
+                <h3>Quintessential Bot</h3>
+                <p class="bot-sub">Recommends the best next swap based on your current board.</p>
+              </header>
+              <div id="qbBotBody" class="bot-body"></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- =============== LETTER BOXED =============== -->
+        <section class="panel" id="panel-letterboxed">
+          <div class="letterboxed-wrap">
+            <h2>Letter Boxed</h2>
+            <p class="muted">
+              Use every letter in the box at least once, forming valid words
+              of three or more letters. The next word starts with the
+              <strong>last letter</strong> of the one before (it’s pre-filled;
+              the highlight shows that link). Two <strong>consecutive</strong> letters
+              in the path must sit on <strong>different</strong> sides. Each
+              new puzzle is built so you <em>can</em> finish in two words. Click
+              letters or the keyboard, then <kbd>Enter</kbd> to submit a word,
+              <kbd>Backspace</kbd> to remove (you can’t remove the link letter
+              by itself; use Clear word to start that word over).
+            </p>
+            <div class="letterboxed-hud">
+              <div><span class="lb-lbl">Par-2 wins</span> <span class="lb-val" id="lbPar2">0</span></div>
+            </div>
+            <div class="lb-square-frame" id="lbSquare" aria-label="Letter box">
+              <svg class="lb-path-svg" id="lbPathSvg" aria-hidden="true">
+                <path id="lbPathLine" class="lb-path-line" fill="none" />
+              </svg>
+              <div class="lb-box-grid">
+                <div class="lb-top" id="lbTop"></div>
+                <div class="lb-midrow">
+                  <div class="lb-left" id="lbLeft"></div>
+                  <div class="lb-center-spacer" aria-hidden="true"></div>
+                  <div class="lb-right" id="lbRight"></div>
+                </div>
+                <div class="lb-bottom" id="lbBottom"></div>
+              </div>
+            </div>
+            <div class="lb-typed">
+              <div class="lb-typed-lbl">Current word</div>
+              <div class="lb-typed-buf" id="lbBuffer">—</div>
+            </div>
+            <div class="lb-words" id="lbChain"></div>
+            <div class="lb-bar">
+              <button class="btn" type="button" id="lbSubmit">Submit word</button>
+              <button class="btn ghost" type="button" id="lbClearWord">Clear word</button>
+              <button class="btn ghost" type="button" id="lbClearPuzzle">Clear puzzle</button>
+              <button class="btn ghost" type="button" id="lbShow">Show a 2-word answer</button>
+              <button class="btn ghost" type="button" id="lbNew">New puzzle</button>
+            </div>
+            <p class="lb-status" id="lbStatus" role="status"></p>
+
+            <section class="bot-panel" id="lbBotPanel" aria-label="Letter Boxed bot">
+              <header class="bot-head">
+                <h3>Letter Boxed Bot</h3>
+                <p class="bot-sub">Progress and a spoiler for the built-in two-word solution.</p>
+              </header>
+              <div id="lbBotBody" class="bot-body"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-ttt">
+          <div class="ttt-wrap">
+            <div class="ttt-header">
+              <h2>Tic tac toe</h2>
+              <p class="muted">You are <strong>X</strong>, the computer is <strong>O</strong>. You move first. The computer always responds with an optimal move.</p>
+            </div>
+            <div class="ttt-grid" id="tttGrid" role="grid" aria-label="Tic tac toe board"></div>
+            <p class="ttt-status" id="tttStatus" role="status">Your turn (X).</p>
+            <div class="ttt-actions">
+              <button type="button" class="btn ghost" id="tttNew">New game</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-cracker">
+          <div class="peg-wrap">
+            <div class="peg-header">
+              <h2>Cracker Barrel peg game</h2>
+              <p class="muted">
+                Triangular board with 15 holes. <strong>Jump</strong> one peg over an adjacent peg into an empty hole in a straight line; the jumped peg is removed.
+                The usual puzzle starts with the top hole empty. Try to <strong>finish with a single peg</strong> (a perfect game leaves it in the same hole you start empty &mdash; hard mode).
+              </p>
+            </div>
+            <div class="peg-board" id="pegBoard" aria-label="Peg solitaire board"></div>
+            <p class="peg-status" id="pegStatus" role="status">Select a peg, then a hole to jump to.</p>
+            <p class="peg-count muted" id="pegCount"></p>
+            <div class="peg-actions">
+              <button type="button" class="btn ghost" id="pegNew">New game</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-reaction">
+          <div class="reaction-wrap" id="reactionBox">
+            <h2 class="reaction-title">Reaction Time</h2>
+            <p class="reaction-text" id="reactionText">
+              Click to start. When the box turns green, click as fast as you can.
+            </p>
+            <div class="reaction-meta">
+              <div><span class="meta-label">Last:</span> <span id="reactionLast">—</span></div>
+              <div><span class="meta-label">Best:</span> <span id="reactionBest">—</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ================= MODALS ================= -->
+    <div class="modal" id="howToModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" data-close>&times;</button>
+        <h2>How to play</h2>
+        <p>Guess the hidden five-letter word in six tries.</p>
+        <ul class="howto-list">
+          <li>Each guess must be a valid five-letter word.</li>
+          <li>Tile colors show how close you were.</li>
+        </ul>
+        <h3>Examples</h3>
+        <div class="howto-row">
+          <span class="ex-tile correct">L</span><span class="ex-tile">A</span>
+          <span class="ex-tile">P</span><span class="ex-tile">S</span><span class="ex-tile">E</span>
+        </div>
+        <p class="muted"><strong>L</strong> is in the word and in the correct spot.</p>
+        <div class="howto-row">
+          <span class="ex-tile">P</span><span class="ex-tile">L</span>
+          <span class="ex-tile present">A</span><span class="ex-tile">N</span><span class="ex-tile">T</span>
+        </div>
+        <p class="muted"><strong>A</strong> is in the word but in the wrong spot.</p>
+        <div class="howto-row">
+          <span class="ex-tile">B</span><span class="ex-tile">L</span>
+          <span class="ex-tile absent">A</span><span class="ex-tile">N</span><span class="ex-tile">K</span>
+        </div>
+        <p class="muted"><strong>A</strong> is not in the word in any spot.</p>
+        <p class="howto-tip muted">Below the stats, the analysis panel summarizes skill and luck after each guess.</p>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-hidden="true"></div>
+
+    <!-- Map quiz embeds first: must load even if a later game script throws -->
+    <script src="world-map-data.js"></script>
+    <script src="us-map-data.js"></script>
+    <script src="map-quiz-continents.js"></script>
+    <script src="map-quiz.js"></script>
+    <script src="words.js"></script>
+    <script src="letterbox-words.js"></script>
+    <script src="letterbox-supplement.js"></script>
+    <script src="bot.js"></script>
+    <script src="nerdle-bot.js"></script>
+    <script src="games.js"></script>
+    <script src="chess-play.js"></script>
+    <script src="online-rooms.js"></script>
+    <script src="letterbox-bot.js"></script>
+    <script src="letterboxed.js"></script>
+    <script src="nerdle.js"></script>
+    <script src="quint-themes.js"></script>
+    <script src="quintessential.js"></script>
+    <script src="quintessential-bot.js"></script>
+    <script src="calc-app.js"></script>
+    <script src="graphcalc.js"></script>
+    <script src="poker.js"></script>
+    <script src="resistor.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
