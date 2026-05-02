@@ -1,0 +1,11 @@
+{
+  "name": "bored-in-class-rooms",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "rooms": "node server/room-server.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}
